@@ -25,10 +25,10 @@ recipes = [
         ],
         "points": "卵を入れることで、オムレツのような触感が楽しめます。醤油ベースの味付けが、野菜と牛肉のうまみを引き出します。",
         "img": "/public/images/dishes/dish1.jpg",
-        "onCalendar": None,
-        "calendarDate": None,
-        "onCandidate": None,
-        "onFavorite": None,
+        "onCalendar": True,
+        "calendarDate": "2024-12-12",
+        "onCandidate": False,
+        "onFavorite": False,
         "onSuggestion": True
     },
 # サンプルデータ２
@@ -45,10 +45,10 @@ recipes = [
         ],
         "points": "ごぼうのアクを抜くため、切ったらすぐに水にさらしましょう。",
         "img": "/public/images/dishes/dish2.jpg",
-        "onCalendar": None,
-        "calendarDate": None,
-        "onCandidate": None,
-        "onFavorite": None,
+        "onCalendar": True,
+        "calendarDate": "2024-12-13",
+        "onCandidate": False,
+        "onFavorite": False,
         "onSuggestion": True
     },
 
@@ -66,10 +66,10 @@ recipes = [
         ],
         "points": "煮る際に落し蓋をすると、味が均一に染み込みます。",
         "img": "/public/images/dishes/dish3.jpg",
-        "onCalendar": None,
-        "calendarDate": None,
-        "onCandidate": None,
-        "onFavorite": None,
+        "onCalendar": True,
+        "calendarDate": "2024-12-1",
+        "onCandidate": False,
+        "onFavorite": False,
         "onSuggestion": True
     },
 
@@ -87,10 +87,10 @@ recipes = [
         ],
         "points": "卵を2回に分けて入れると、ふんわり仕上がります。",
         "img": "/public/images/dishes/dish4.jpg",
-        "onCalendar": None,
-        "calendarDate": None,
-        "onCandidate": None,
-        "onFavorite": None,
+        "onCalendar": True,
+        "calendarDate": "2024-12-2",
+        "onCandidate": True,
+        "onFavorite": False,
         "onSuggestion": True
     },
 
@@ -109,10 +109,10 @@ recipes = [
         ],
         "points": "赤ワインで煮込むことで、コクが深まります。",
         "img": "/public/images/dishes/dish5.jpg",
-        "onCalendar": None,
-        "calendarDate": None,
-        "onCandidate": None,
-        "onFavorite": None,
+        "onCalendar": True,
+        "calendarDate": "2024-12-25",
+        "onCandidate": True,
+        "onFavorite": True,
         "onSuggestion": True
     },
 
@@ -131,10 +131,10 @@ recipes = [
         ],
         "points": "卵は半熟に仕上げるとふんわり感がアップします。",
         "img": "/public/images/dishes/dish6.jpg",
-        "onCalendar": None,
-        "calendarDate": None,
-        "onCandidate": None,
-        "onFavorite": None,
+        "onCalendar": True,
+        "calendarDate": "2024-12-3",
+        "onCandidate": False,
+        "onFavorite": False,
         "onSuggestion": True
     },
 
@@ -153,10 +153,10 @@ recipes = [
         ],
         "points": "肉ダネは冷蔵庫で少し寝かせると、味が馴染みます。",
         "img": "/public/images/dishes/dish7.jpg",
-        "onCalendar": None,
+        "onCalendar": False,
         "calendarDate": None,
-        "onCandidate": None,
-        "onFavorite": None,
+        "onCandidate": False,
+        "onFavorite": False,
         "onSuggestion": True
     },
 
@@ -175,10 +175,10 @@ recipes = [
         ],
         "points": "余熱で卵液を固めることで、クリーミーに仕上がります。",
         "img": "/public/images/dishes/dish8.jpg",
-        "onCalendar": None,
-        "calendarDate": None,
-        "onCandidate": None,
-        "onFavorite": None,
+        "onCalendar": True,
+        "calendarDate": "2024-12-8",
+        "onCandidate": True,
+        "onFavorite": False,
         "onSuggestion": True
     },
 
@@ -197,10 +197,10 @@ recipes = [
         ],
         "points": "花椒を加えることで本格的な痺れる辛さが楽しめます。",
         "img": "/public/images/dishes/dish9.jpg",
-        "onCalendar": None,
-        "calendarDate": None,
-        "onCandidate": None,
-        "onFavorite": None,
+        "onCalendar": True,
+        "calendarDate": "2024-12-28",
+        "onCandidate": False,
+        "onFavorite": False,
         "onSuggestion": True
     },
 
@@ -220,10 +220,10 @@ recipes = [
         ],
         "points": "具材は手早く炒めてシャキシャキ感を残しましょう。",
         "img": "/public/images/dishes/dish10.jpg",
-        "onCalendar": None,
-        "calendarDate": None,
-        "onCandidate": None,
-        "onFavorite": None,
+        "onCalendar": True,
+        "calendarDate": "2024-12-9",
+        "onCandidate": True,
+        "onFavorite": True,
         "onSuggestion": True
     },
 
@@ -242,10 +242,10 @@ recipes = [
         ],
         "points": "パイナップルを入れると甘みと酸味が引き立ちます。",
         "img": "/public/images/dishes/dish11.jpg",
-        "onCalendar": None,
-        "calendarDate": None,
-        "onCandidate": None,
-        "onFavorite": None,
+        "onCalendar": True,
+        "calendarDate": "2024-12-10",
+        "onCandidate": False,
+        "onFavorite": True,
         "onSuggestion": True
     },
 
@@ -264,10 +264,10 @@ recipes = [
         ],
         "points": "仕上げにラー油をたっぷり加えると、辛さと香りが際立ちます。",
         "img": "/public/images/dishes/dish12.jpg",
-        "onCalendar": None,
-        "calendarDate": None,
-        "onCandidate": None,
-        "onFavorite": None,
+        "onCalendar": True,
+        "calendarDate": "2024-12-4",
+        "onCandidate": False,
+        "onFavorite": False,
         "onSuggestion": True
     },
 
@@ -286,10 +286,10 @@ recipes = [
         ],
         "points": "バジルはたっぷり加えると風味が引き立ちます。辛さはお好みで調整してください。",
         "img": "/public/images/dishes/dish13.jpg",
-        "onCalendar": None,
-        "calendarDate": None,
-        "onCandidate": None,
-        "onFavorite": None,
+        "onCalendar": True,
+        "calendarDate": "2024-12-11",
+        "onCandidate": True,
+        "onFavorite": False,
         "onSuggestion": True
     },
 
@@ -308,10 +308,10 @@ recipes = [
         ],
         "points": "しっかり漬け込むことで、風味豊かな仕上がりになります。",
         "img": "/public/images/dishes/dish14.jpg",
-        "onCalendar": None,
+        "onCalendar": False,
         "calendarDate": None,
-        "onCandidate": None,
-        "onFavorite": None,
+        "onCandidate": False,
+        "onFavorite": False,
         "onSuggestion": True
     },
 
@@ -330,10 +330,10 @@ recipes = [
         ],
         "points": "お好みでライムや唐辛子を加えて、さっぱりとした味わいを楽しんでください。",
         "img": "/public/images/dishes/dish15.jpg",
-        "onCalendar": None,
-        "calendarDate": None,
-        "onCandidate": None,
-        "onFavorite": None,
+        "onCalendar": True,
+        "calendarDate": "2024-12-5",
+        "onCandidate": False,
+        "onFavorite": False,
         "onSuggestion": True
     },
 
@@ -352,10 +352,10 @@ recipes = [
         ],
         "points": "具材はお好みでアボカドやハラペーニョを加えても美味しいです。",
         "img": "/public/images/dishes/dish16.jpg",
-        "onCalendar": None,
-        "calendarDate": None,
-        "onCandidate": None,
-        "onFavorite": None,
+        "onCalendar": True,
+        "calendarDate": "2024-12-14",
+        "onCandidate": False,
+        "onFavorite": True,
         "onSuggestion": True
     },
 
@@ -373,10 +373,10 @@ recipes = [
         ],
         "points": "生姜を加えると臭みが取れて風味が良くなります。",
         "img": "/public/images/dishes/dish17.jpg",
-        "onCalendar": None,
-        "calendarDate": None,
-        "onCandidate": None,
-        "onFavorite": None,
+        "onCalendar": True,
+        "calendarDate": "2024-12-6",
+        "onCandidate": False,
+        "onFavorite": False,
         "onSuggestion": True
     },
 
@@ -394,10 +394,10 @@ recipes = [
         ],
         "points": "きのこは数種類使うと旨味が増します。",
         "img": "/public/images/dishes/dish18.jpg",
-        "onCalendar": None,
+        "onCalendar": False,
         "calendarDate": None,
-        "onCandidate": None,
-        "onFavorite": None,
+        "onCandidate": False,
+        "onFavorite": False,
         "onSuggestion": True
     },
 
@@ -415,10 +415,10 @@ recipes = [
         ],
         "points": "牛肉は薄切りを使うと柔らかく仕上がります。",
         "img": "/public/images/dishes/dish19.jpg",
-        "onCalendar": None,
+        "onCalendar": False,
         "calendarDate": None,
-        "onCandidate": None,
-        "onFavorite": None,
+        "onCandidate": False,
+        "onFavorite": False,
         "onSuggestion": True
     },
 
@@ -436,10 +436,10 @@ recipes = [
         ],
         "points": "卵液はこすと滑らかな仕上がりになります。",
         "img": "/public/images/dishes/dish20.jpg",
-        "onCalendar": None,
+        "onCalendar": False,
         "calendarDate": None,
-        "onCandidate": None,
-        "onFavorite": None,
+        "onCandidate": False,
+        "onFavorite": False,
         "onSuggestion": True
     },
 
@@ -459,10 +459,10 @@ recipes = [
         ],
         "points": "ケチャップはしっかり炒めると甘みと香ばしさが増します。",
         "img": "/public/images/dishes/dish21.jpg",
-        "onCalendar": None,
+        "onCalendar": False,
         "calendarDate": None,
-        "onCandidate": None,
-        "onFavorite": None,
+        "onCandidate": False,
+        "onFavorite": False,
         "onSuggestion": True
     },
 
@@ -481,10 +481,10 @@ recipes = [
         ],
         "points": "チーズは最後に乗せて、余熱でとろりと溶かしましょう。",
         "img": "/public/images/dishes/dish22.jpg",
-        "onCalendar": None,
-        "calendarDate": None,
-        "onCandidate": None,
-        "onFavorite": None,
+        "onCalendar": True,
+        "calendarDate": "2024-12-7",
+        "onCandidate": False,
+        "onFavorite": False,
         "onSuggestion": True
     },
 
@@ -503,10 +503,10 @@ recipes = [
         ],
         "points": "トマト缶はしっかり煮詰めることで、旨味が凝縮されます。",
         "img": "/public/images/dishes/dish23.jpg",
-        "onCalendar": None,
+        "onCalendar": False,
         "calendarDate": None,
-        "onCandidate": None,
-        "onFavorite": None,
+        "onCandidate": False,
+        "onFavorite": False,
         "onSuggestion": True
     },
 
@@ -524,10 +524,10 @@ recipes = [
         ],
         "points": "エビは片栗粉で下処理するとプリプリになります。",
         "img": "/public/images/dishes/dish24.jpg",
-        "onCalendar": None,
-        "calendarDate": None,
-        "onCandidate": None,
-        "onFavorite": None,
+        "onCalendar": True,
+        "calendarDate": "2024-12-18",
+        "onCandidate": False,
+        "onFavorite": False,
         "onSuggestion": True
     },
 
@@ -544,10 +544,10 @@ recipes = [
         ],
         "points": "卵は半熟に仕上げましょう。",
         "img": "/public/images/dishes/dish25.jpg",
-        "onCalendar": None,
+        "onCalendar": False,
         "calendarDate": None,
-        "onCandidate": None,
-        "onFavorite": None,
+        "onCandidate": False,
+        "onFavorite": False,
         "onSuggestion": True
     },
 
@@ -565,10 +565,10 @@ recipes = [
         ],
         "points": "カシューナッツは最後に加えて、食感を残しましょう。",
         "img": "/public/images/dishes/dish26.jpg",
-        "onCalendar": None,
+        "onCalendar": False,
         "calendarDate": None,
-        "onCandidate": None,
-        "onFavorite": None,
+        "onCandidate": False,
+        "onFavorite": False,
         "onSuggestion": True
     },
 
@@ -586,10 +586,10 @@ recipes = [
         ],
         "points": "揚げる前に包み終わりをしっかり閉じると、油が入らずきれいに揚がります。",
         "img": "/public/images/dishes/dish27.jpg",
-        "onCalendar": None,
+        "onCalendar": False,
         "calendarDate": None,
-        "onCandidate": None,
-        "onFavorite": None,
+        "onCandidate": False,
+        "onFavorite": False,
         "onSuggestion": True
     },
 
@@ -608,10 +608,10 @@ recipes = [
         ],
         "points": "カレー粉はしっかり炒めて香りを立たせましょう。",
         "img": "/public/images/dishes/dish28.jpg",
-        "onCalendar": None,
+        "onCalendar": False,
         "calendarDate": None,
-        "onCandidate": None,
-        "onFavorite": None,
+        "onCandidate": False,
+        "onFavorite": False,
         "onSuggestion": True
     },
 
@@ -630,10 +630,10 @@ recipes = [
         ],
         "points": "辛さはペーストの量で調整できます。",
         "img": "/public/images/dishes/dish29.jpg",
-        "onCalendar": None,
+        "onCalendar": False,
         "calendarDate": None,
-        "onCandidate": None,
-        "onFavorite": None,
+        "onCandidate": False,
+        "onFavorite": False,
         "onSuggestion": True
     },
 
@@ -651,10 +651,10 @@ recipes = [
         ],
         "points": "卵は半熟に仕上げると、全体がまろやかになります。",
         "img": "/public/images/dishes/dish30.jpg",
-        "onCalendar": None,
+        "onCalendar": False,
         "calendarDate": None,
-        "onCandidate": None,
-        "onFavorite": None,
+        "onCandidate": False,
+        "onFavorite": False,
         "onSuggestion": True
     },
 ]
