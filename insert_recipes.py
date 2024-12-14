@@ -1,4 +1,5 @@
 import mysql.connector
+import json
 
 # データベース接続設定
 db_config = {
@@ -15,7 +16,17 @@ recipes = [
         "title": "ふわっととろける！牛肉と玉ねぎのオムレツ炒め",
         "genre": "和食",
         "description": "とろり卵が牛肉とたまねぎを包み込み、まるでオムレツのような満足感。仕上げに醤油をひとたらしで香ばしさアップ！",
-        "ingredients": "キャベツ: 1/4玉,牛肉 (薄切り): 200g,玉ねぎ: 1/2個,ピーマン: 2個,卵: 2個,醤油: 大さじ2,サラダ油: 大さじ1,塩: 適量,胡椒: 適量",
+         "ingredients": [
+            {"name": "キャベツ", "quantity": "1/4玉"},
+            {"name": "牛肉 (薄切り)", "quantity": "200g"},
+            {"name": "玉ねぎ", "quantity": "1/2個"},
+            {"name": "ピーマン", "quantity": "2個"},
+            {"name": "卵", "quantity": "2個"},
+            {"name": "醤油", "quantity": "大さじ2"},
+            {"name": "サラダ油", "quantity": "大さじ1"},
+            {"name": "塩", "quantity": "適量"},
+            {"name": "胡椒", "quantity": "適量"}
+        ],
         "steps": [
             "キャベツはざく切り、玉ねぎは薄切りにする。",
             "フライパンにサラダ油を熱し、牛肉を炒める。",
@@ -26,7 +37,7 @@ recipes = [
         "points": "卵を入れることで、オムレツのような触感が楽しめます。醤油ベースの味付けが、野菜と牛肉のうまみを引き出します。",
         "img": "/public/images/dishes/dish1.jpg",
         "onCalendar": True,
-        "calendarDate": "2024-12-12",
+        "calendarDate": 12,
         "onCandidate": False,
         "onFavorite": False,
         "onSuggestion": True
@@ -36,7 +47,15 @@ recipes = [
         "title": "シャキシャキ食感！香ばしいきんぴらごぼう",
         "genre": "和食",
         "description": "シャキシャキしたごぼうと甘辛い味付けが絶品！お弁当や副菜にもぴったりです。",
-        "ingredients": "ごぼう: 1本,にんじん: 1/2本,醤油: 大さじ2,みりん: 大さじ1,砂糖: 大さじ1,ごま油: 大さじ1,いりごま: 適量",
+        "ingredients": [
+            {"name": "ごぼう", "quantity": "1本"},
+            {"name": "にんじん", "quantity": "1/2本"},
+            {"name": "醤油", "quantity": "大さじ2"},
+            {"name": "みりん", "quantity": "大さじ1"},
+            {"name": "砂糖", "quantity": "大さじ1"},
+            {"name": "ごま油", "quantity": "大さじ1"},
+            {"name": "いりごま", "quantity": "適量"}
+        ],
         "steps": [
             "ごぼうとにんじんを千切りにする。",
             "フライパンにごま油を熱し、ごぼうとにんじんを炒める。",
@@ -46,7 +65,7 @@ recipes = [
         "points": "ごぼうのアクを抜くため、切ったらすぐに水にさらしましょう。",
         "img": "/public/images/dishes/dish2.jpg",
         "onCalendar": True,
-        "calendarDate": "2024-12-13",
+        "calendarDate": 13,
         "onCandidate": False,
         "onFavorite": False,
         "onSuggestion": True
@@ -57,7 +76,16 @@ recipes = [
         "title": "ほっこり幸せ！おふくろの味・肉じゃが",
         "genre": "和食",
         "description": "ほっこり甘辛い味付けで、ごはんが進む家庭の定番料理。",
-        "ingredients": "牛肉: 200g,じゃがいも: 3個,にんじん: 1本,玉ねぎ: 1個,醤油: 大さじ3,みりん: 大さじ2,砂糖: 大さじ2,だし汁: 300ml",
+        "ingredients": [
+            {"name": "牛肉", "quantity": "200g"},
+            {"name": "じゃがいも", "quantity": "3個"},
+            {"name": "にんじん", "quantity": "1本"},
+            {"name": "玉ねぎ", "quantity": "1個"},
+            {"name": "醤油", "quantity": "大さじ3"},
+            {"name": "みりん", "quantity": "大さじ2"},
+            {"name": "砂糖", "quantity": "大さじ2"},
+            {"name": "だし汁", "quantity": "300ml"}
+        ],
         "steps": [
             "材料を一口大に切る。",
             "鍋で牛肉と玉ねぎを炒める。",
@@ -67,7 +95,7 @@ recipes = [
         "points": "煮る際に落し蓋をすると、味が均一に染み込みます。",
         "img": "/public/images/dishes/dish3.jpg",
         "onCalendar": True,
-        "calendarDate": "2024-12-1",
+        "calendarDate": 1,
         "onCandidate": False,
         "onFavorite": False,
         "onSuggestion": True
@@ -78,7 +106,16 @@ recipes = [
         "title": "とろふわ卵がたまらない！絶品親子丼",
         "genre": "和食",
         "description": "ふわふわの卵と鶏肉の組み合わせが絶妙な丼ぶり。",
-        "ingredients": "鶏肉: 150g,卵: 2個,玉ねぎ: 1/2個,醤油: 大さじ2,みりん: 大さじ2,砂糖: 大さじ1,だし汁: 100ml,ごはん: 2膳",
+        "ingredients": [
+            {"name": "鶏肉", "quantity": "150g"},
+            {"name": "卵", "quantity": "2個"},
+            {"name": "玉ねぎ", "quantity": "1/2個"},
+            {"name": "醤油", "quantity": "大さじ2"},
+            {"name": "みりん", "quantity": "大さじ2"},
+            {"name": "砂糖", "quantity": "大さじ1"},
+            {"name": "だし汁", "quantity": "100ml"},
+            {"name": "ごはん", "quantity": "2膳"}
+        ],
         "steps": [
             "鶏肉と玉ねぎを一口大に切る。",
             "鍋にだし汁、醤油、みりん、砂糖を入れて煮立てる。",
@@ -88,7 +125,7 @@ recipes = [
         "points": "卵を2回に分けて入れると、ふんわり仕上がります。",
         "img": "/public/images/dishes/dish4.jpg",
         "onCalendar": True,
-        "calendarDate": "2024-12-2",
+        "calendarDate": 2,
         "onCandidate": True,
         "onFavorite": False,
         "onSuggestion": True
@@ -99,7 +136,17 @@ recipes = [
         "title": "寒い12月でも体ポカポカビーフシチュー",
         "genre": "洋食",
         "description": "牛肉がほろほろになるまで煮込んだ、濃厚なデミグラスソースのビーフシチュー。",
-        "ingredients": "牛肉 (シチュー用): 300g,じゃがいも: 2個,にんじん: 1本,玉ねぎ: 1個,デミグラスソース: 300ml,赤ワイン: 100ml,バター: 大さじ2,小麦粉: 大さじ1,塩: 適量,胡椒: 適量",
+        "ingredients": [
+            {"name": "合い挽き肉", "quantity": "300g"},
+            {"name": "玉ねぎ", "quantity": "1個"},
+            {"name": "卵", "quantity": "1個"},
+            {"name": "パン粉", "quantity": "大さじ4"},
+            {"name": "牛乳", "quantity": "大さじ2"},
+            {"name": "塩", "quantity": "適量"},
+            {"name": "胡椒", "quantity": "適量"},
+            {"name": "ナツメグ", "quantity": "少々"},
+            {"name": "サラダ油", "quantity": "大さじ1"}
+        ],
         "steps": [
             "牛肉に塩・胡椒をし、小麦粉をまぶす。",
             "鍋でバターを溶かし、牛肉を焼き色がつくまで焼く。",
@@ -110,9 +157,9 @@ recipes = [
         "points": "赤ワインで煮込むことで、コクが深まります。",
         "img": "/public/images/dishes/dish5.jpg",
         "onCalendar": True,
-        "calendarDate": "2024-12-25",
+        "calendarDate": 5,
         "onCandidate": True,
-        "onFavorite": True,
+        "onFavorite": False,
         "onSuggestion": True
     },
 
@@ -121,7 +168,16 @@ recipes = [
         "title": "ふわとろ卵の魔法！絶品オムライス",
         "genre": "洋食",
         "description": "ふわふわ卵で包んだケチャップライスが絶品！大人も子供も大好きな一品。",
-        "ingredients": "ごはん: 2膳分,鶏肉: 100g,玉ねぎ: 1/2個,ケチャップ: 大さじ4,卵: 2個,バター: 大さじ1,塩: 適量,胡椒: 適量",
+        "ingredients": [
+            {"name": "パスタ", "quantity": "200g"},
+            {"name": "ベーコン", "quantity": "100g"},
+            {"name": "卵", "quantity": "2個"},
+            {"name": "生クリーム", "quantity": "100ml"},
+            {"name": "粉チーズ", "quantity": "大さじ4"},
+            {"name": "塩", "quantity": "適量"},
+            {"name": "胡椒", "quantity": "適量"},
+            {"name": "オリーブオイル", "quantity": "大さじ1"}
+        ],
         "steps": [
             "鶏肉と玉ねぎを一口大に切る。",
             "フライパンでバターを溶かし、鶏肉と玉ねぎを炒める。",
@@ -132,7 +188,7 @@ recipes = [
         "points": "卵は半熟に仕上げるとふんわり感がアップします。",
         "img": "/public/images/dishes/dish6.jpg",
         "onCalendar": True,
-        "calendarDate": "2024-12-3",
+        "calendarDate": 3,
         "onCandidate": False,
         "onFavorite": False,
         "onSuggestion": True
@@ -143,7 +199,20 @@ recipes = [
         "title": "ジュワッと肉汁あふれる！王道ハンバーグ",
         "genre": "洋食",
         "description": "ジューシーでふっくらとした定番ハンバーグ。特製ソースでさらに美味しく！",
-        "ingredients": "合い挽き肉: 300g,玉ねぎ: 1個,卵: 1個,パン粉: 大さじ4,牛乳: 大さじ2,塩: 適量,胡椒: 適量,ナツメグ: 少々,サラダ油: 大さじ1",
+        "ingredients": [
+            {"name": "木綿豆腐", "quantity": "1丁"},
+            {"name": "豚ひき肉", "quantity": "150g"},
+            {"name": "長ねぎ", "quantity": "1/2本"},
+            {"name": "豆板醤", "quantity": "大さじ1"},
+            {"name": "甜麺醤", "quantity": "大さじ1"},
+            {"name": "しょうゆ", "quantity": "大さじ2"},
+            {"name": "酒", "quantity": "大さじ1"},
+            {"name": "水", "quantity": "150ml"},
+            {"name": "鶏がらスープの素", "quantity": "小さじ1"},
+            {"name": "片栗粉", "quantity": "大さじ1"},
+            {"name": "ごま油", "quantity": "大さじ1"},
+            {"name": "花椒", "quantity": "適量"}
+        ],
         "steps": [
             "玉ねぎをみじん切りにし、炒めて冷ます。",
             "合い挽き肉、玉ねぎ、卵、パン粉、牛乳、調味料を混ぜる。",
@@ -165,7 +234,16 @@ recipes = [
         "title": "濃厚クリーミー！本格カルボナーラ",
         "genre": "洋食",
         "description": "濃厚なチーズとベーコンの旨味が絡む、クリーミーなパスタ。",
-        "ingredients": "パスタ: 200g,ベーコン: 100g,卵: 2個,生クリーム: 100ml,粉チーズ: 大さじ4,塩: 適量,胡椒: 適量,オリーブオイル: 大さじ1",
+        "ingredients": [
+            {"name": "パスタ", "quantity": "200g"},
+            {"name": "ベーコン", "quantity": "100g"},
+            {"name": "卵", "quantity": "2個"},
+            {"name": "生クリーム", "quantity": "100ml"},
+            {"name": "粉チーズ", "quantity": "大さじ4"},
+            {"name": "塩", "quantity": "適量"},
+            {"name": "胡椒", "quantity": "適量"},
+            {"name": "オリーブオイル", "quantity": "大さじ1"}
+        ],
         "steps": [
             "ベーコンを細切りにし、オリーブオイルで炒める。",
             "パスタを茹でる。",
@@ -176,7 +254,7 @@ recipes = [
         "points": "余熱で卵液を固めることで、クリーミーに仕上がります。",
         "img": "/public/images/dishes/dish8.jpg",
         "onCalendar": True,
-        "calendarDate": "2024-12-8",
+        "calendarDate": 8,
         "onCandidate": True,
         "onFavorite": False,
         "onSuggestion": True
@@ -187,7 +265,20 @@ recipes = [
         "title": "しびれる辛さ！本格四川麻婆豆腐",
         "genre": "中華",
         "description": "ピリッと辛くてごはんが進む定番中華料理。豆腐とひき肉の旨味がたっぷり！",
-        "ingredients": "木綿豆腐: 1丁,豚ひき肉: 150g,長ねぎ: 1/2本,豆板醤: 大さじ1,甜麺醤: 大さじ1,しょうゆ: 大さじ2,酒: 大さじ1,水: 150ml,鶏がらスープの素: 小さじ1,片栗粉: 大さじ1,ごま油: 大さじ1,花椒: 適量",
+        "ingredients": [
+            {"name": "木綿豆腐", "quantity": "1丁"},
+            {"name": "豚ひき肉", "quantity": "150g"},
+            {"name": "長ねぎ", "quantity": "1/2本"},
+            {"name": "豆板醤", "quantity": "大さじ1"},
+            {"name": "甜麺醤", "quantity": "大さじ1"},
+            {"name": "しょうゆ", "quantity": "大さじ2"},
+            {"name": "酒", "quantity": "大さじ1"},
+            {"name": "水", "quantity": "150ml"},
+            {"name": "鶏がらスープの素", "quantity": "小さじ1"},
+            {"name": "片栗粉", "quantity": "大さじ1"},
+            {"name": "ごま油", "quantity": "大さじ1"},
+            {"name": "花椒", "quantity": "適量"}
+        ],
         "steps": [
             "豆腐を一口大に切り、熱湯で軽く茹でて水気を切る。",
             "フライパンにごま油を熱し、豚ひき肉を炒める。",
@@ -198,7 +289,7 @@ recipes = [
         "points": "花椒を加えることで本格的な痺れる辛さが楽しめます。",
         "img": "/public/images/dishes/dish9.jpg",
         "onCalendar": True,
-        "calendarDate": "2024-12-28",
+        "calendarDate": 28,
         "onCandidate": False,
         "onFavorite": False,
         "onSuggestion": True
@@ -209,8 +300,18 @@ recipes = [
         "title": "シャキッと旨い！ピーマンたっぷり青椒肉絲",
         "genre": "中華",
         "description": "シャキシャキのピーマンと細切り豚肉の絶妙な組み合わせ。ごはんにぴったりの炒め物。",
-        "ingredients": 
-            "豚肉 (細切り): 200g,ピーマン: 3個,たけのこ (細切り): 100g,しょうゆ: 大さじ2,酒: 大さじ1,オイスターソース: 大さじ1,片栗粉: 大さじ1,サラダ油: 大さじ2,塩: 少々,胡椒: 少々",
+        "ingredients": [
+            {"name": "豚肉 (細切り)", "quantity": "200g"},
+            {"name": "ピーマン", "quantity": "3個"},
+            {"name": "たけのこ (細切り)", "quantity": "100g"},
+            {"name": "しょうゆ", "quantity": "大さじ2"},
+            {"name": "酒", "quantity": "大さじ1"},
+            {"name": "オイスターソース", "quantity": "大さじ1"},
+            {"name": "片栗粉", "quantity": "大さじ1"},
+            {"name": "サラダ油", "quantity": "大さじ2"},
+            {"name": "塩", "quantity": "少々"},
+            {"name": "胡椒", "quantity": "少々"}
+        ],
         "steps": [
             "豚肉に塩、胡椒、片栗粉をまぶす。",
             "ピーマンとたけのこを細切りにする。",
@@ -221,9 +322,9 @@ recipes = [
         "points": "具材は手早く炒めてシャキシャキ感を残しましょう。",
         "img": "/public/images/dishes/dish10.jpg",
         "onCalendar": True,
-        "calendarDate": "2024-12-9",
+        "calendarDate": 9,
         "onCandidate": True,
-        "onFavorite": True,
+        "onFavorite": False,
         "onSuggestion": True
     },
 
@@ -232,7 +333,19 @@ recipes = [
         "title": "甘酸っぱさがやみつき！彩り酢豚",
         "genre": "中華",
         "description": "甘酸っぱいタレが絡む、ジューシーな豚肉と野菜の炒め物。",
-        "ingredients": "豚肩ロース肉: 200g,玉ねぎ: 1/2個,ピーマン: 2個,にんじん: 1/2本,パイナップル: 50g,片栗粉: 大さじ2,酢: 大さじ2,しょうゆ: 大さじ2,砂糖: 大さじ3,ケチャップ: 大さじ2,サラダ油: 大さじ2",
+        "ingredients": [
+            {"name": "豚肩ロース肉", "quantity": "200g"},
+            {"name": "玉ねぎ", "quantity": "1/2個"},
+            {"name": "ピーマン", "quantity": "2個"},
+            {"name": "にんじん", "quantity": "1/2本"},
+            {"name": "パイナップル", "quantity": "50g"},
+            {"name": "片栗粉", "quantity": "大さじ2"},
+            {"name": "酢", "quantity": "大さじ2"},
+            {"name": "しょうゆ", "quantity": "大さじ2"},
+            {"name": "砂糖", "quantity": "大さじ3"},
+            {"name": "ケチャップ", "quantity": "大さじ2"},
+            {"name": "サラダ油", "quantity": "大さじ2"}
+        ],
         "steps": [
             "豚肉を一口大に切り、片栗粉をまぶす。",
             "野菜とパイナップルを食べやすい大きさに切る。",
@@ -243,9 +356,9 @@ recipes = [
         "points": "パイナップルを入れると甘みと酸味が引き立ちます。",
         "img": "/public/images/dishes/dish11.jpg",
         "onCalendar": True,
-        "calendarDate": "2024-12-10",
+        "calendarDate": 10,
         "onCandidate": False,
-        "onFavorite": True,
+        "onFavorite": False,
         "onSuggestion": True
     },
 
@@ -254,7 +367,19 @@ recipes = [
         "title": "コク旨ピリ辛！クセになる担々麺",
         "genre": "中華",
         "description": "ピリ辛ごまスープが癖になる本格的な担々麺。",
-        "ingredients": "中華麺: 1玉,豚ひき肉: 100g,長ねぎ: 1/2本,にんにく: 1片,しょうが: 1片,豆板醤: 小さじ1,練りごま: 大さじ2,しょうゆ: 大さじ2,鶏がらスープ: 300ml,ラー油: 適量,ごま油: 大さじ1",
+        "ingredients": [
+            {"name": "中華麺", "quantity": "1玉"},
+            {"name": "豚ひき肉", "quantity": "100g"},
+            {"name": "長ねぎ", "quantity": "1/2本"},
+            {"name": "にんにく", "quantity": "1片"},
+            {"name": "しょうが", "quantity": "1片"},
+            {"name": "豆板醤", "quantity": "小さじ1"},
+            {"name": "練りごま", "quantity": "大さじ2"},
+            {"name": "しょうゆ", "quantity": "大さじ2"},
+            {"name": "鶏がらスープ", "quantity": "300ml"},
+            {"name": "ラー油", "quantity": "適量"},
+            {"name": "ごま油", "quantity": "大さじ1"}
+        ],
         "steps": [
             "にんにく、しょうが、長ねぎをみじん切りにする。",
             "フライパンでごま油を熱し、豚ひき肉、にんにく、しょうがを炒める。",
@@ -265,7 +390,7 @@ recipes = [
         "points": "仕上げにラー油をたっぷり加えると、辛さと香りが際立ちます。",
         "img": "/public/images/dishes/dish12.jpg",
         "onCalendar": True,
-        "calendarDate": "2024-12-4",
+        "calendarDate": 4,
         "onCandidate": False,
         "onFavorite": False,
         "onSuggestion": True
@@ -276,7 +401,20 @@ recipes = [
         "title": "香り立つバジル！本格ガパオライス",
         "genre": "その他",
         "description": "タイの定番料理！バジルの香りとピリ辛のひき肉炒めがごはんと相性抜群。",
-        "ingredients": "鶏ひき肉: 200g,パプリカ: 1/2個,ピーマン: 1個,にんにく: 1片,赤唐辛子: 1本,バジル: 一掴み,ナンプラー: 大さじ2,オイスターソース: 大さじ1,砂糖: 小さじ1,サラダ油: 大さじ1,卵: 1個,ごはん: 1膳分",
+        "ingredients": [
+            {"name": "鶏ひき肉", "quantity": "200g"},
+            {"name": "パプリカ", "quantity": "1/2個"},
+            {"name": "ピーマン", "quantity": "1個"},
+            {"name": "にんにく", "quantity": "1片"},
+            {"name": "赤唐辛子", "quantity": "1本"},
+            {"name": "バジル", "quantity": "一掴み"},
+            {"name": "ナンプラー", "quantity": "大さじ2"},
+            {"name": "オイスターソース", "quantity": "大さじ1"},
+            {"name": "砂糖", "quantity": "小さじ1"},
+            {"name": "サラダ油", "quantity": "大さじ1"},
+            {"name": "卵", "quantity": "1個"},
+            {"name": "ごはん", "quantity": "1膳分"}
+        ],
         "steps": [
             "にんにくと赤唐辛子をみじん切りにする。",
             "フライパンにサラダ油を熱し、にんにくと唐辛子を炒める。",
@@ -287,7 +425,7 @@ recipes = [
         "points": "バジルはたっぷり加えると風味が引き立ちます。辛さはお好みで調整してください。",
         "img": "/public/images/dishes/dish13.jpg",
         "onCalendar": True,
-        "calendarDate": "2024-12-11",
+        "calendarDate": 11,
         "onCandidate": True,
         "onFavorite": False,
         "onSuggestion": True
@@ -298,7 +436,17 @@ recipes = [
         "title": "スパイス香る！ジューシータンドリーチキン",
         "genre": "その他",
         "description": "スパイスとヨーグルトで漬け込んだ、香ばしく焼き上げるインド風チキン。",
-        "ingredients": "鶏もも肉: 2枚,プレーンヨーグルト: 100g,にんにく: 1片,しょうが: 1片,カレー粉: 大さじ1,パプリカパウダー: 小さじ1,塩: 小さじ1,レモン汁: 大さじ1,サラダ油: 大さじ1",
+        "ingredients": [
+            {"name": "鶏もも肉", "quantity": "2枚"},
+            {"name": "プレーンヨーグルト", "quantity": "100g"},
+            {"name": "にんにく", "quantity": "1片"},
+            {"name": "しょうが", "quantity": "1片"},
+            {"name": "カレー粉", "quantity": "大さじ1"},
+            {"name": "パプリカパウダー", "quantity": "小さじ1"},
+            {"name": "塩", "quantity": "小さじ1"},
+            {"name": "レモン汁", "quantity": "大さじ1"},
+            {"name": "サラダ油", "quantity": "大さじ1"}
+        ],
         "steps": [
             "にんにく、しょうがをすりおろす。",
             "ヨーグルト、カレー粉、パプリカパウダー、塩、レモン汁、にんにく、しょうがを混ぜる。",
@@ -320,7 +468,18 @@ recipes = [
         "title": "香り豊か！あっさり鶏だしフォー",
         "genre": "その他",
         "description": "あっさりした鶏だしが効いた、ベトナムの定番ライスヌードルスープ。",
-        "ingredients": "フォー麺: 100g,鶏むね肉: 150g,もやし: 50g,青ねぎ: 2本,パクチー: 適量,鶏がらスープ: 500ml,ナンプラー: 大さじ1,塩: 小さじ1,ライム: 1/2個,赤唐辛子: 1本",
+        "ingredients": [
+            {"name": "フォー麺", "quantity": "100g"},
+            {"name": "鶏むね肉", "quantity": "150g"},
+            {"name": "もやし", "quantity": "50g"},
+            {"name": "青ねぎ", "quantity": "2本"},
+            {"name": "パクチー", "quantity": "適量"},
+            {"name": "鶏がらスープ", "quantity": "500ml"},
+            {"name": "ナンプラー", "quantity": "大さじ1"},
+            {"name": "塩", "quantity": "小さじ1"},
+            {"name": "ライム", "quantity": "1/2個"},
+            {"name": "赤唐辛子", "quantity": "1本"}
+        ],
         "steps": [
             "鶏むね肉を茹で、細かく裂く。",
             "鶏がらスープにナンプラーと塩を加えて温める。",
@@ -331,7 +490,7 @@ recipes = [
         "points": "お好みでライムや唐辛子を加えて、さっぱりとした味わいを楽しんでください。",
         "img": "/public/images/dishes/dish15.jpg",
         "onCalendar": True,
-        "calendarDate": "2024-12-5",
+        "calendarDate": 15,
         "onCandidate": False,
         "onFavorite": False,
         "onSuggestion": True
@@ -342,7 +501,17 @@ recipes = [
         "title": "カリッとあなたも包み込む！?メキシカン風タコス",
         "genre": "その他",
         "description": "スパイス香るひき肉とフレッシュな野菜をトルティーヤで包んだ、メキシコの人気料理。",
-        "ingredients": "トルティーヤ: 4枚,牛ひき肉: 200g,玉ねぎ: 1/2個,トマト: 1個,レタス: 2枚,チーズ: 50g,サルサソース: 大さじ2,タコミートシーズニング: 大さじ1,サラダ油: 大さじ1",
+        "ingredients": [
+            {"name": "トルティーヤ", "quantity": "4枚"},
+            {"name": "牛ひき肉", "quantity": "200g"},
+            {"name": "玉ねぎ", "quantity": "1/2個"},
+            {"name": "トマト", "quantity": "1個"},
+            {"name": "レタス", "quantity": "2枚"},
+            {"name": "チーズ", "quantity": "50g"},
+            {"name": "サルサソース", "quantity": "大さじ2"},
+            {"name": "タコミートシーズニング", "quantity": "大さじ1"},
+            {"name": "サラダ油", "quantity": "大さじ1"}
+        ],
         "steps": [
             "玉ねぎとトマトをみじん切りにし、レタスは千切りにする。",
             "フライパンにサラダ油を熱し、牛ひき肉とタコミートシーズニングを炒める。",
@@ -353,9 +522,9 @@ recipes = [
         "points": "具材はお好みでアボカドやハラペーニョを加えても美味しいです。",
         "img": "/public/images/dishes/dish16.jpg",
         "onCalendar": True,
-        "calendarDate": "2024-12-14",
+        "calendarDate": 14,
         "onCandidate": False,
-        "onFavorite": True,
+        "onFavorite": False,
         "onSuggestion": True
     },
 
@@ -364,7 +533,15 @@ recipes = [
         "title": "ごはんが進む！サバ味噌煮",
         "genre": "和食",
         "description": "甘辛い味噌ダレで煮込んだサバがふっくら仕上がります。",
-        "ingredients": "サバ: 2切れ, 味噌: 大さじ3, みりん: 大さじ2, 砂糖: 大さじ2, 生姜: 1片, 酒: 大さじ2, 水: 200ml",
+        "ingredients": [
+            {"name": "サバ", "quantity": "2切れ"},
+            {"name": "味噌", "quantity": "大さじ3"},
+            {"name": "みりん", "quantity": "大さじ2"},
+            {"name": "砂糖", "quantity": "大さじ2"},
+            {"name": "生姜", "quantity": "1片"},
+            {"name": "酒", "quantity": "大さじ2"},
+            {"name": "水", "quantity": "200ml"}
+        ],
         "steps": [
             "サバは食べやすい大きさに切る。",
             "鍋に水、酒、みりん、砂糖、味噌を入れて煮立てる。",
@@ -374,18 +551,26 @@ recipes = [
         "points": "生姜を加えると臭みが取れて風味が良くなります。",
         "img": "/public/images/dishes/dish17.jpg",
         "onCalendar": True,
-        "calendarDate": "2024-12-6",
+        "calendarDate": 6,
         "onCandidate": False,
         "onFavorite": False,
         "onSuggestion": True
     },
 
-# ンプルデータ18
+# サンプルデータ18
     {
         "title": "香り豊か！きのこの炊き込みご飯",
         "genre": "和食",
         "description": "きのこの旨味が染み込んだ秋の味覚。",
-        "ingredients": "米: 2合, しめじ: 1パック, えのき: 1パック, 醤油: 大さじ2, みりん: 大さじ1, 酒: 大さじ1, だし汁: 400ml",
+        "ingredients": [
+            {"name": "米", "quantity": "2合"},
+            {"name": "しめじ", "quantity": "1パック"},
+            {"name": "えのき", "quantity": "1パック"},
+            {"name": "醤油", "quantity": "大さじ2"},
+            {"name": "みりん", "quantity": "大さじ1"},
+            {"name": "酒", "quantity": "大さじ1"},
+            {"name": "だし汁", "quantity": "400ml"}
+        ],
         "steps": [
             "米を研ぎ、炊飯器にセットする。",
             "しめじとえのきを小分けにする。",
@@ -406,7 +591,15 @@ recipes = [
         "title": "だしが決め手！コク旨肉うどん",
         "genre": "和食",
         "description": "甘辛い牛肉と旨味たっぷりのだしが絡む、満足感のあるうどん。",
-        "ingredients": "うどん: 2玉, 牛肉: 150g, だし汁: 500ml, 醤油: 大さじ2, みりん: 大さじ2, 砂糖: 大さじ1, 長ねぎ: 1本",
+        "ingredients": [
+            {"name": "うどん", "quantity": "2玉"},
+            {"name": "牛肉", "quantity": "150g"},
+            {"name": "だし汁", "quantity": "500ml"},
+            {"name": "醤油", "quantity": "大さじ2"},
+            {"name": "みりん", "quantity": "大さじ2"},
+            {"name": "砂糖", "quantity": "大さじ1"},
+            {"name": "長ねぎ", "quantity": "1本"}
+        ],
         "steps": [
             "牛肉を食べやすい大きさに切る。",
             "鍋にだし汁、醤油、みりん、砂糖を入れ煮立てる。",
@@ -427,7 +620,16 @@ recipes = [
         "title": "なめらか食感！定番茶碗蒸し",
         "genre": "和食",
         "description": "ふんわり滑らかな茶碗蒸し。おもてなしにも最適です。",
-        "ingredients": "卵: 2個, だし汁: 300ml, 醤油: 小さじ1, 塩: 小さじ1/2, みりん: 小さじ1, しいたけ: 2枚, かまぼこ: 2切れ, 鶏肉: 50g",
+        "ingredients": [
+            {"name": "卵", "quantity": "2個"},
+            {"name": "だし汁", "quantity": "300ml"},
+            {"name": "醤油", "quantity": "小さじ1"},
+            {"name": "塩", "quantity": "小さじ1/2"},
+            {"name": "みりん", "quantity": "小さじ1"},
+            {"name": "しいたけ", "quantity": "2枚"},
+            {"name": "かまぼこ", "quantity": "2切れ"},
+            {"name": "鶏肉", "quantity": "50g"}
+        ],
         "steps": [
             "卵を溶き、だし汁、醤油、塩、みりんを加えて混ぜる。",
             "器に具材を入れ、卵液を注ぐ。",
@@ -436,8 +638,8 @@ recipes = [
         ],
         "points": "卵液はこすと滑らかな仕上がりになります。",
         "img": "/public/images/dishes/dish20.jpg",
-        "onCalendar": False,
-        "calendarDate": None,
+        "onCalendar": True,
+        "calendarDate": 16,
         "onCandidate": False,
         "onFavorite": False,
         "onSuggestion": True
@@ -448,7 +650,17 @@ recipes = [
         "title": "懐かしの味！喫茶店風ナポリタン",
         "genre": "洋食",
         "description": "ケチャップの甘みと酸味が絶妙！どこか懐かしい喫茶店風のナポリタンです。",
-        "ingredients": "スパゲッティ: 200g, 玉ねぎ: 1/2個, ピーマン: 2個, ソーセージ: 4本, ケチャップ: 大さじ4, バター: 大さじ1, 塩: 少々, 胡椒: 少々, 粉チーズ: 適量",
+        "ingredients": [
+            {"name": "スパゲッティ", "quantity": "200g"},
+            {"name": "玉ねぎ", "quantity": "1/2個"},
+            {"name": "ピーマン", "quantity": "2個"},
+            {"name": "ソーセージ", "quantity": "4本"},
+            {"name": "ケチャップ", "quantity": "大さじ4"},
+            {"name": "バター", "quantity": "大さじ1"},
+            {"name": "塩", "quantity": "少々"},
+            {"name": "胡椒", "quantity": "少々"},
+            {"name": "粉チーズ", "quantity": "適量"}
+        ],
         "steps": [
             "スパゲッティを茹でる。",
             "玉ねぎ、ピーマン、ソーセージを食べやすい大きさに切る。",
@@ -471,7 +683,17 @@ recipes = [
         "title": "とろけるチーズ！ジューシーハンバーグ",
         "genre": "洋食",
         "description": "ジューシーなハンバーグにチーズがとろりと溶けた一品。",
-        "ingredients": "合い挽き肉: 300g, 玉ねぎ: 1個, 卵: 1個, パン粉: 大さじ4, 牛乳: 大さじ2, 塩: 適量, 胡椒: 適量, スライスチーズ: 2枚, サラダ油: 大さじ1",
+        "ingredients": [
+            {"name": "合い挽き肉", "quantity": "300g"},
+            {"name": "玉ねぎ", "quantity": "1個"},
+            {"name": "卵", "quantity": "1個"},
+            {"name": "パン粉", "quantity": "大さじ4"},
+            {"name": "牛乳", "quantity": "大さじ2"},
+            {"name": "塩", "quantity": "適量"},
+            {"name": "胡椒", "quantity": "適量"},
+            {"name": "スライスチーズ", "quantity": "2枚"},
+            {"name": "サラダ油", "quantity": "大さじ1"}
+        ],
         "steps": [
             "玉ねぎをみじん切りにし、炒めて冷ます。",
             "合い挽き肉、玉ねぎ、卵、パン粉、牛乳、調味料を混ぜる。",
@@ -482,7 +704,7 @@ recipes = [
         "points": "チーズは最後に乗せて、余熱でとろりと溶かしましょう。",
         "img": "/public/images/dishes/dish22.jpg",
         "onCalendar": True,
-        "calendarDate": "2024-12-7",
+        "calendarDate": 7,
         "onCandidate": False,
         "onFavorite": False,
         "onSuggestion": True
@@ -493,7 +715,16 @@ recipes = [
         "title": "おうちで簡単！ミートソースパスタ",
         "genre": "洋食",
         "description": "トマトとひき肉の旨味がたっぷり詰まったミートソース。",
-        "ingredients": "スパゲッティ: 200g, 牛ひき肉: 150g, 玉ねぎ: 1/2個, トマト缶: 1缶, にんにく: 1片, オリーブオイル: 大さじ2, 塩: 適量, 胡椒: 適量",
+        "ingredients": [
+            {"name": "スパゲッティ", "quantity": "200g"},
+            {"name": "牛ひき肉", "quantity": "150g"},
+            {"name": "玉ねぎ", "quantity": "1/2個"},
+            {"name": "トマト缶", "quantity": "1缶"},
+            {"name": "にんにく", "quantity": "1片"},
+            {"name": "オリーブオイル", "quantity": "大さじ2"},
+            {"name": "塩", "quantity": "適量"},
+            {"name": "胡椒", "quantity": "適量"}
+        ],
         "steps": [
             "玉ねぎとにんにくをみじん切りにする。",
             "フライパンにオリーブオイルを熱し、にんにくを炒める。",
@@ -515,7 +746,16 @@ recipes = [
         "title": "プリプリ海老のエビチリ",
         "genre": "中華",
         "description": "ピリ辛のチリソースが海老に絡んだ絶品中華。",
-        "ingredients": "むきエビ: 200g, ねぎ: 1/2本, にんにく: 1片, しょうが: 1片, ケチャップ: 大さじ4, 豆板醤: 大さじ1, 片栗粉: 大さじ1, ごま油: 大さじ1",
+        "ingredients": [
+            {"name": "むきエビ", "quantity": "200g"},
+            {"name": "ねぎ", "quantity": "1/2本"},
+            {"name": "にんにく", "quantity": "1片"},
+            {"name": "しょうが", "quantity": "1片"},
+            {"name": "ケチャップ", "quantity": "大さじ4"},
+            {"name": "豆板醤", "quantity": "大さじ1"},
+            {"name": "片栗粉", "quantity": "大さじ1"},
+            {"name": "ごま油", "quantity": "大さじ1"}
+        ],
         "steps": [
             "エビに片栗粉をまぶし、下茹でする。",
             "フライパンでにんにく、しょうが、ねぎを炒める。",
@@ -525,7 +765,7 @@ recipes = [
         "points": "エビは片栗粉で下処理するとプリプリになります。",
         "img": "/public/images/dishes/dish24.jpg",
         "onCalendar": True,
-        "calendarDate": "2024-12-18",
+        "calendarDate": 18,
         "onCandidate": False,
         "onFavorite": False,
         "onSuggestion": True
@@ -536,7 +776,14 @@ recipes = [
         "title": "ふわとろ卵の天津飯",
         "genre": "中華",
         "description": "ふわふわ卵とあんが絶妙な中華風ごはん。",
-        "ingredients": "卵: 2個, カニカマ: 4本, ごはん: 1膳分, だし汁: 100ml, 醤油: 大さじ1, 片栗粉: 大さじ1",
+        "ingredients": [
+            {"name": "卵", "quantity": "2個"},
+            {"name": "カニカマ", "quantity": "4本"},
+            {"name": "ごはん", "quantity": "1膳分"},
+            {"name": "だし汁", "quantity": "100ml"},
+            {"name": "醤油", "quantity": "大さじ1"},
+            {"name": "片栗粉", "quantity": "大さじ1"}
+        ],
         "steps": [
             "卵を溶き、カニカマを加える。",
             "フライパンで卵を焼き、ごはんに乗せる。",
@@ -556,7 +803,17 @@ recipes = [
         "title": "香ばしさ満点！鶏肉とカシューナッツ炒め",
         "genre": "中華",
         "description": "カリッとしたカシューナッツとジューシーな鶏肉の相性抜群な一品。",
-        "ingredients": "鶏もも肉: 200g, カシューナッツ: 50g, ピーマン: 2個, 赤パプリカ: 1/2個, にんにく: 1片, しょうゆ: 大さじ2, オイスターソース: 大さじ1, 片栗粉: 大さじ1, サラダ油: 大さじ1",
+        "ingredients": [
+            {"name": "鶏もも肉", "quantity": "200g"},
+            {"name": "カシューナッツ", "quantity": "50g"},
+            {"name": "ピーマン", "quantity": "2個"},
+            {"name": "赤パプリカ", "quantity": "1/2個"},
+            {"name": "にんにく", "quantity": "1片"},
+            {"name": "しょうゆ", "quantity": "大さじ2"},
+            {"name": "オイスターソース", "quantity": "大さじ1"},
+            {"name": "片栗粉", "quantity": "大さじ1"},
+            {"name": "サラダ油", "quantity": "大さじ1"}
+        ],
         "steps": [
             "鶏肉を一口大に切り、片栗粉をまぶす。",
             "フライパンに油を熱し、鶏肉を炒める。",
@@ -565,8 +822,8 @@ recipes = [
         ],
         "points": "カシューナッツは最後に加えて、食感を残しましょう。",
         "img": "/public/images/dishes/dish26.jpg",
-        "onCalendar": False,
-        "calendarDate": None,
+        "onCalendar": True,
+        "calendarDate": 17,
         "onCandidate": False,
         "onFavorite": False,
         "onSuggestion": True
@@ -577,7 +834,18 @@ recipes = [
         "title": "パリッとジューシー！春巻き",
         "genre": "中華",
         "description": "パリパリの皮と中のジューシーな具がたまらない定番中華。",
-        "ingredients": "春巻きの皮: 10枚, 豚ひき肉: 200g, たけのこ: 50g, 干ししいたけ: 2枚, にんじん: 1/2本, 春雨: 50g, しょうゆ: 大さじ2, オイスターソース: 大さじ1, 片栗粉: 大さじ1, サラダ油: 適量",
+        "ingredients": [
+            {"name": "春巻きの皮", "quantity": "10枚"},
+            {"name": "豚ひき肉", "quantity": "200g"},
+            {"name": "たけのこ", "quantity": "50g"},
+            {"name": "干ししいたけ", "quantity": "2枚"},
+            {"name": "にんじん", "quantity": "1/2本"},
+            {"name": "春雨", "quantity": "50g"},
+            {"name": "しょうゆ", "quantity": "大さじ2"},
+            {"name": "オイスターソース", "quantity": "大さじ1"},
+            {"name": "片栗粉", "quantity": "大さじ1"},
+            {"name": "サラダ油", "quantity": "適量"}
+        ],
         "steps": [
             "春雨を戻し、野菜としいたけを細切りにする。",
             "ひき肉と野菜を炒め、調味料で味付けする。",
@@ -598,7 +866,19 @@ recipes = [
         "title": "スパイス香る！簡単キーマカレー",
         "genre": "その他",
         "description": "ひき肉と野菜がたっぷり入った、スパイシーで旨味たっぷりのカレー。",
-        "ingredients": "合い挽き肉: 200g, 玉ねぎ: 1個, にんじん: 1/2本, ピーマン: 1個, カレー粉: 大さじ2, トマト缶: 1/2缶, にんにく: 1片, しょうが: 1片, 塩: 適量, 胡椒: 適量, サラダ油: 大さじ1",
+        "ingredients": [
+            {"name": "合い挽き肉", "quantity": "200g"},
+            {"name": "玉ねぎ", "quantity": "1個"},
+            {"name": "にんじん", "quantity": "1/2本"},
+            {"name": "ピーマン", "quantity": "1個"},
+            {"name": "カレー粉", "quantity": "大さじ2"},
+            {"name": "トマト缶", "quantity": "1/2缶"},
+            {"name": "にんにく", "quantity": "1片"},
+            {"name": "しょうが", "quantity": "1片"},
+            {"name": "塩", "quantity": "適量"},
+            {"name": "胡椒", "quantity": "適量"},
+            {"name": "サラダ油", "quantity": "大さじ1"}
+        ],
         "steps": [
             "野菜をみじん切りにする。",
             "フライパンに油を熱し、にんにくとしょうがを炒める。",
@@ -620,7 +900,17 @@ recipes = [
         "title": "ココナッツ香る！タイ風グリーンカレー",
         "genre": "その他",
         "description": "ココナッツミルクの甘さとスパイシーさが絶妙にマッチしたタイの定番カレー。",
-        "ingredients": "鶏肉: 200g, ナス: 2本, パプリカ: 1個, グリーンカレーペースト: 大さじ2, ココナッツミルク: 400ml, ナンプラー: 大さじ2, 砂糖: 大さじ1, バジル: 適量, サラダ油: 大さじ1",
+        "ingredients": [
+            {"name": "鶏肉", "quantity": "200g"},
+            {"name": "ナス", "quantity": "2本"},
+            {"name": "パプリカ", "quantity": "1個"},
+            {"name": "グリーンカレーペースト", "quantity": "大さじ2"},
+            {"name": "ココナッツミルク", "quantity": "400ml"},
+            {"name": "ナンプラー", "quantity": "大さじ2"},
+            {"name": "砂糖", "quantity": "大さじ1"},
+            {"name": "バジル", "quantity": "適量"},
+            {"name": "サラダ油", "quantity": "大さじ1"}
+        ],
         "steps": [
             "鶏肉と野菜を食べやすい大きさに切る。",
             "フライパンに油を熱し、グリーンカレーペーストを炒める。",
@@ -642,7 +932,18 @@ recipes = [
         "title": "野菜たっぷり！彩りビビンバ",
         "genre": "その他",
         "description": "彩り豊かな野菜とお肉を混ぜて食べる韓国の定番ごはん。",
-        "ingredients": "ごはん: 1膳分, 牛肉: 100g, ほうれん草: 50g, もやし: 50g, にんじん: 1/2本, 卵: 1個, コチュジャン: 大さじ1, ごま油: 大さじ1, しょうゆ: 大さじ2, 砂糖: 大さじ1",
+        "ingredients":  [
+            {"name": "ごはん", "quantity": "1膳分"},
+            {"name": "牛肉", "quantity": "100g"},
+            {"name": "ほうれん草", "quantity": "50g"},
+            {"name": "もやし", "quantity": "50g"},
+            {"name": "にんじん", "quantity": "1/2本"},
+            {"name": "卵", "quantity": "1個"},
+            {"name": "コチュジャン", "quantity": "大さじ1"},
+            {"name": "ごま油", "quantity": "大さじ1"},
+            {"name": "しょうゆ", "quantity": "大さじ2"},
+            {"name": "砂糖", "quantity": "大さじ1"}
+        ],
         "steps": [
             "牛肉をしょうゆと砂糖で炒める。",
             "ほうれん草、もやし、にんじんをそれぞれ茹で、ごま油と塩で和える。",
@@ -655,6 +956,124 @@ recipes = [
         "calendarDate": None,
         "onCandidate": False,
         "onFavorite": False,
+        "onSuggestion": True
+    },
+
+# サンプルデータ31
+    {
+        "title": "トシさん激推し!絶品納豆ご飯",
+        "genre": "和食",
+        "description": "シンプルながらも深い味わい。納豆のネバネバと卵黄が絡み合う究極のご飯。",
+        "ingredients": [
+            {"name": "ごはん", "quantity": "1膳分"},
+            {"name": "納豆", "quantity": "1パック"},
+            {"name": "卵黄", "quantity": "1個"},
+            {"name": "醤油", "quantity": "小さじ1"},
+            {"name": "青ねぎ", "quantity": "適量"}
+        ],
+        "steps": [
+            "ごはんを茶碗に盛る。",
+            "納豆に醤油を混ぜてよくかき混ぜる。",
+            "ごはんに納豆をかけ、中央に卵黄をのせる。",
+            "青ねぎを散らして完成。"
+        ],
+        "points": "卵黄を加えることで、まろやかさがアップします。",
+        "img": "/public/images/dishes/dish31.jpg",
+        "onCalendar": True,
+        "calendarDate": 21,
+        "onCandidate": False,
+        "onFavorite": True,
+        "onSuggestion": True
+    },
+
+# サンプルデータ32
+    {
+        "title": "さけさんおすすめトマトのさっぱりサラダ",
+        "genre": "その他",
+        "description": "みずみずしいトマトと香味野菜が引き立つ、さっぱりとしたサラダ。",
+        "ingredients": [
+            {"name": "トマト", "quantity": "2個"},
+            {"name": "玉ねぎ", "quantity": "1/4個"},
+            {"name": "バジル", "quantity": "適量"},
+            {"name": "醤油", "quantity": "小さじ2"},
+            {"name": "ごま油", "quantity": "小さじ1"}
+        ],
+        "steps": [
+            "トマトを食べやすい大きさに切る。",
+            "玉ねぎを薄切りにし、水にさらして辛味を抜く。",
+            "トマトと玉ねぎを皿に盛り、バジルを添える。",
+            "醤油とごま油をかけて完成。"
+        ],
+        "points": "冷蔵庫で冷やしてから食べるとさらに美味しいです。",
+        "img": "/public/images/dishes/dish32.jpg",
+        "onCalendar": True,
+        "calendarDate": 18,
+        "onCandidate": False,
+        "onFavorite": True,
+        "onSuggestion": True
+    },
+
+# サンプルデータ33
+    {
+        "title": "こーきさんの定番!熱々羽付き紫蘇餃子",
+        "genre": "中華",
+        "description": "パリッとした羽と紫蘇の香りが広がるジューシーな餃子。",
+        "ingredients": [
+            {"name": "豚ひき肉", "quantity": "200g"},
+            {"name": "紫蘇の葉", "quantity": "10枚"},
+            {"name": "餃子の皮", "quantity": "20枚"},
+            {"name": "にんにく", "quantity": "1片"},
+            {"name": "しょうが", "quantity": "1片"},
+            {"name": "片栗粉", "quantity": "小さじ1"},
+            {"name": "しょうゆ", "quantity": "大さじ1"},
+            {"name": "ごま油", "quantity": "小さじ1"},
+            {"name": "サラダ油", "quantity": "適量"}
+        ],
+        "steps": [
+            "豚ひき肉に刻んだ紫蘇、にんにく、しょうが、調味料を加えて混ぜる。",
+            "餃子の皮に具を包む。",
+            "フライパンに油を熱し、餃子を並べて焼く。",
+            "水を加え蓋をし、蒸し焼きにする。",
+            "水がなくなったら羽ができるまで焼き上げる。"
+        ],
+        "points": "紫蘇の香りがアクセント。羽をしっかり焼くとパリッと仕上がります。",
+        "img": "/public/images/dishes/dish33.jpg",
+        "onCalendar": True,
+        "calendarDate": 23,
+        "onCandidate": False,
+        "onFavorite": True,
+        "onSuggestion": True
+    },
+
+# サンプルデータ34
+   {
+        "title": "ぐっさん秘伝の濃厚辛口カレー!",
+        "genre": "和食",
+        "description": "濃厚な旨味とスパイスの辛さが絶妙に絡み合う秘伝のカレー。",
+        "ingredients": [
+            {"name": "牛肉", "quantity": "300g"},
+            {"name": "玉ねぎ", "quantity": "2個"},
+            {"name": "じゃがいも", "quantity": "2個"},
+            {"name": "にんじん", "quantity": "1本"},
+            {"name": "カレールー", "quantity": "1箱"},
+            {"name": "赤唐辛子", "quantity": "2本"},
+            {"name": "にんにく", "quantity": "1片"},
+            {"name": "しょうが", "quantity": "1片"},
+            {"name": "水", "quantity": "800ml"}
+        ],
+        "steps": [
+            "牛肉を一口大に切り、塩胡椒で下味をつける。",
+            "玉ねぎ、じゃがいも、にんじんを食べやすい大きさに切る。",
+            "鍋に油を熱し、にんにくとしょうがを炒め、牛肉を加えて焼き色をつける。",
+            "野菜を加えて炒め、水を加えて煮込む。",
+            "カレールーと赤唐辛子を加えてさらに煮込む。"
+        ],
+        "points": "煮込む時間が長いほど、牛肉が柔らかくなり旨味が増します。",
+        "img": "/public/images/dishes/dish34.jpg",
+        "onCalendar": True,
+        "calendarDate": 31,
+        "onCandidate": False,
+        "onFavorite": True,
         "onSuggestion": True
     },
 ]
@@ -673,12 +1092,15 @@ try:
 
     # レシピデータを挿入
     for recipe in recipes:
+        # ingredientsをJSON文字列に変換
+        formatted_ingredients = json.dumps(recipe["ingredients"], ensure_ascii=False)
+
         cursor.execute(insert_query, (
             recipe["title"],
             recipe["genre"],
             recipe["description"],
-            "\n".join(recipe["ingredients"]),  # リストを改行で結合して文字列に変換
-            "\n".join(recipe["steps"]),        # リストを改行で結合して文字列に変換
+            formatted_ingredients,  # JSON形式で格納
+            "\n".join(recipe["steps"]),
             recipe["points"],
             recipe["img"],
             recipe["onCalendar"],
