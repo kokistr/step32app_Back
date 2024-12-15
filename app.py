@@ -15,10 +15,10 @@ app = Flask(__name__)
 CORS(app, resources={
     r"/api/*": {
         "origins": [
-            "http://tech0-gen-8-step3-app-node-14.azurewebsites.net",
-            "http://tech0-gen-8-step3-rdb-14.mysql.database.azure.com/",
-            "http://localhost:3000",
-                # ローカル開発用
+            "https://tech0-gen-8-step3-app-node-14.azurewebsites.net",
+            "https://tech0-gen-8-step3-rdb-14.mysql.database.azure.com/",
+            "https://localhost:3000",
+            "http://localhost:3000" # ローカル開発用
         ]
     }
 })
