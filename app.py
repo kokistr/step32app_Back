@@ -17,6 +17,7 @@ CORS(app, resources={
         "origins": [
             "https://tech0-gen-8-step3-app-node-14.azurewebsites.net",
             "https://tech0-gen-8-step3-rdb-14.mysql.database.azure.com/",
+            "https://tech0-gen-8-step3-testapp-node2-28.azurewebsites.net",
             "https://localhost:3000",
             "http://localhost:3000" # ローカル開発用
         ]
